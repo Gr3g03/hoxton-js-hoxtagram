@@ -61,7 +61,7 @@ function renderImgaContainer(){
     for (const comment of container.comments){
         const comentLiEl = document.createElement('li')
         comentLiEl.textContent = comment.content
-        ulEl.append(comentLiEl)
+        comentUlEl.append(comentLiEl)
     }
     likesDivEl.append(spanEL, LikeBtnEl)
     articleEl.append(h2TextEl, imageEl, likesDivEl, comentUlEl)
@@ -80,7 +80,7 @@ function render(){
 
 getImagesFromServer().then(function(imageDataFromServer){
     state.images = imageDataFromServer
-    // render()
+    render()
 })
 
 render()
