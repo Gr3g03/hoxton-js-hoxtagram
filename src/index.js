@@ -33,7 +33,7 @@ function getImagesFromServer(){
 
 
 function renderImgaContainer(){
-    // imageContainer.innerHTML = ''
+    imageContainer.innerHTML = ''
     for (container of state.images){
     const articleEl = document.createElement('article')
     articleEl.setAttribute('class', 'image-card')
@@ -67,9 +67,9 @@ function renderImgaContainer(){
     articleEl.append(h2TextEl, imageEl, likesDivEl, comentUlEl)
     imageContainer.append(articleEl)
 
-    for(const postEl of container){
-        renderImgaContainer(postEl)
-    }
+    // for(const postEl of container){
+    //     renderImgaContainer(postEl)
+    // }
 }
 }
 
